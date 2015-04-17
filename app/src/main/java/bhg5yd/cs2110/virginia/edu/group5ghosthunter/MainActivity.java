@@ -1,17 +1,52 @@
 package bhg5yd.cs2110.virginia.edu.group5ghosthunter;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private Button play;
+    private Button high_score;
+    private boolean buttonClicked;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        this.play = (Button)findViewById(R.id.play_button);
+        //Need to add code for what happens when button is pushed
+        play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonClicked = true;
+                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                MainActivity.this.startActivity(intent);
+
+                //Launch the game activity
+            }
+        });
+
+        this.high_score = (Button) findViewById(R.id.high_score_button);
+
+        high_score.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+
     }
 
 
@@ -35,5 +70,9 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public boolean getButton(){
+        return this.buttonClicked;
     }
 }
