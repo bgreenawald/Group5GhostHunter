@@ -25,7 +25,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
         this.play = (Button)findViewById(R.id.play_button);
-        //Need to add code for what happens when button is pushed
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
