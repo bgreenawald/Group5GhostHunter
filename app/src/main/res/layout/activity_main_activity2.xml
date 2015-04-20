@@ -21,17 +21,61 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Small Text"
+        android:text="@string/score"
         android:id="@+id/score"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="#ff31b73a" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/lives"
+        android:id="@+id/textView9"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/character_icon"
+        android:layout_alignStart="@+id/character_icon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView2"
+        android:src="@drawable/life_icon"
+        android:layout_below="@+id/textView9"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView3"
+        android:src="@drawable/life_icon"
+        android:layout_toEndOf="@+id/character_icon"
+        android:layout_below="@+id/textView9"
+        android:layout_toRightOf="@+id/character_icon" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:src="@drawable/life_icon"
+        android:layout_alignRight="@+id/character_icon"
+        android:layout_alignEnd="@+id/character_icon"
+        android:layout_below="@+id/textView9"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/main_menu"
+        android:id="@+id/button3"
+        android:layout_below="@+id/imageView2"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
-    <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/bullet_icon"-->
-        <!--android:src="@drawable/bullet"-->
-        <!--android:layout_alignParentBottom="true"-->
-        <!--android:layout_centerHorizontal="true"/>-->
+
 </RelativeLayout>

@@ -15,6 +15,7 @@ public class MainActivity extends ActionBarActivity {
 
     private Button play;
     private Button high_score;
+    private Button how_to_play;
     private boolean buttonClicked;
 
 
@@ -43,6 +44,15 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
 
+            }
+        });
+
+        this.how_to_play = (Button) findViewById(R.id.how_to_play_button);
+        how_to_play.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, HowToPlay.class);
+                MainActivity.this.startActivity(intent);
             }
         });
 

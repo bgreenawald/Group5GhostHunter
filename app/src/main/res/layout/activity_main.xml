@@ -15,14 +15,14 @@
         android:id="@+id/textView8"
         android:textColor="#c435b93e"
         android:textSize="@android:dimen/app_icon_size"
-        android:layout_marginTop="186dp"
+        android:layout_marginTop="130dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
+        android:text="@string/play_button"
         android:id="@+id/play_button"
         android:layout_below="@+id/textView8"
         android:layout_centerHorizontal="true"
@@ -32,11 +32,31 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="High Scores"
+        android:text="@string/play_hard_button"
         android:id="@+id/high_score_button"
         android:layout_below="@+id/play_button"
         android:layout_centerHorizontal="true"
         android:theme="@style/AppTheme"
         android:onClick="send_message2"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_below="@+id/high_score_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/how_to_play"
+        android:id="@+id/how_to_play_button"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/play_button"
+        android:layout_alignStart="@+id/play_button" />
 
 </RelativeLayout>
